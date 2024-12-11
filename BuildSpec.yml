@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "installing maven"
+      - apt update -y && apt install maven -y
+  pre_build:
+    commands:
+      - echo "checking maven version"
+      - mvn --version
+  build:
+    commands:
+      - echo "build project"
+      - mvn clean install
+  post_build:
+    commands:
+      - echo "build finished"
+      - ls && cd target/ & ls
+  artifacts:
+    files:
+      - sample.war
+      - pom.xml
