@@ -17,7 +17,7 @@ phases:
     commands:
       - echo "build finished"
       - ls && cd target/ & ls
-  artifacts:
-    files:
-      - sample.war
-      - pom.xml
+artifacts:
+  files:
+    - sample.war
+    - pom.xml
