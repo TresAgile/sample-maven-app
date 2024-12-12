@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: maven-app/sample.war
+  - source: sample.war
     destination: /opt/
 hooks:
   ApplicationStop:
