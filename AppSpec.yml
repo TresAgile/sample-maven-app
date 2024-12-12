@@ -4,11 +4,19 @@ files:
   - source: maven-app/sample.war
     destination: /opt/
 hooks:
+  ApplicationStop:
+    - location: stop_tomcat.sh
+      timeout: 300
+      runas: root
   BeforeInstall:
     - location: stop_tomcat.sh
       timeout: 300
       runas: root
   AfterInstall:
     - location: start_tomcat.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: stop_tomcat.sh
       timeout: 300
       runas: root
