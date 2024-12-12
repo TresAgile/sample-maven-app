@@ -21,3 +21,5 @@ artifacts:
   files:
     - sample.war
     - AppSpec.yml
+    - stop_tomcat.sh
+    - start_tomcat.sh
